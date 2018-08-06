@@ -1,0 +1,52 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="w3.css">
+	<title>Browser</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+		function update() {
+			var e = document.getElementById("url");
+			var userurl = e.value;
+			document.getElementById("iframe").src=userurl;
+		}
+		function gohome() {
+			var userurl = "http://bing.com";
+			document.getElementById("iframe").src=userurl;
+				}
+	 </script>
+</head>
+
+
+
+<body class="w3-black">
+
+	<div class="w3-padding-large">
+		<div style="border: 6px solid yellow;" class="w3-center w3-padding-16 ">
+			<div class="w3-large w3-padding-small w3-row">
+ 				<div class="w3-col" style="width:85%"><input class="w3-input w3-black w3-border-bottom w3-border-yellow" type="text" id="url" placeholder="Website URL"></div>
+				<div class="w3-col" style="width:15%"><button class="w3-btn w3-yellow" onclick="update();">GO!</button></div>
+			</div>
+		</div>
+
+		<div class="w3-large w3-padding-small w3-row">
+			<div class="w3-col" style="width:60px"><button class="w3-btn w3-yellow" onclick="window.history.back();"><i class="fa fa-chevron-left"></i></button></div>
+			<div class="w3-col" style="width:60px"><button class="w3-btn w3-yellow" onclick="window.history.forward();"><i class="fa fa-chevron-right"></i></button></div>
+			<div class="w3-col" style="width:60px"><button class="w3-btn w3-yellow" onclick="location.reload();"><i class="fa fa-refresh"></i></button></div>
+			<div class="w3-col" style="width:60px"><button class="w3-btn w3-yellow" onclick="gohome();"><i class="fa fa-home"></i></button></div>
+		</div>
+
+    <div class="w3-padding-16">
+      <div class="w3-white" style="position:relative;padding-top:56.25%;">
+  <iframe src="http://bing.com" id="iframe" frameborder="0" allowfullscreen
+    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
+    </div>
+
+	</div>
+
+</body>
+
+</html>
